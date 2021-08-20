@@ -38,9 +38,16 @@ def print_header
 end
 
 def print(students)
-  students.each do |student|
-    puts "#{student[:name]} (#{student[:cohort]} cohort)"
+  count = 0
+  until count == students.length do 
+    puts students[count][:name]
+    count += 1
   end
+  #students.each.with_index(1) do |student, index|
+    #if student[:name].start_with?("t") && student[:name].length <= 12
+    #puts "#{index} #{student[:name]} (#{student[:cohort]} cohort)"
+   # end
+  #end
 end
 
 def print_footer(students)
